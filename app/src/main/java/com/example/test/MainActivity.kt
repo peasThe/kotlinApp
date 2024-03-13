@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.content.Intent
+import androidx.room.Room
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,11 +27,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, RecipeList::class.java))
         }
 
-        val cakeIngredients: Set<Ingredient> = setOf(
-            Ingredient("egg").apply { quantity = 2 },
-            Ingredient("rice").apply { quantity = 200 }, // assuming 200 grams of rice
-            Ingredient("lemon").apply { quantity = 1 }
-        )
-        var cakeRecipe = Recipe(cakeIngredients, 0, "dessert")
+        val db = Room.databaseBuilder(
+            applicationContext,
+            AppDatabase::class.java, "database-name"
+        ).build()
+
     }
 }
