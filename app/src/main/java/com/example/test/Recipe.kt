@@ -1,18 +1,18 @@
 package com.example.test
 
-
-class Recipe(val recipeIngredients: Set<Ingredient>,  val season: Int, val type: String) {
+/*
+class Recipe2(val recipeIngredients: Set<Ingredient>,  val season: Int, val type: String) {
     //season - 0 = none, 1 = spring, 2 = summer, 3 = autumn, 4 = winter
     //type - dessert, lunch, breakfast, snack
     var favorite = false
     val blacklist = false
 }
 
-class Ingredient(var name: String) {
+class Ingredient2(var name: String) {
     var quantity: Int = 0
 }
 
-val ingredients: MutableSet<Ingredient> = mutableSetOf(
+val ingredients2: MutableSet<Ingredient2> = mutableSetOf(
     Ingredient("flour"),
     Ingredient("butter"),
     Ingredient("chicken"),
@@ -53,3 +53,4 @@ val ingredients: MutableSet<Ingredient> = mutableSetOf(
     Ingredient("pasta"),
     Ingredient("potatoes")
 )
+*/
